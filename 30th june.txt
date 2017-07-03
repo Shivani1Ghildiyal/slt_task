@@ -1,0 +1,61 @@
+30th july
+=========
+
+1.	Write a short note on Deque and give example code.
+The java.util.Deque interface is a subtype of the java.util.Queue interface.
+ It represents a queue where you can insert and remove elements from both ends of the queue. 
+Thus, "Deque" is short for "Double Ended Queue"
+import java.util.*;
+public class ArrayDequeExample{
+public static void main(String[] args)
+{
+deque<string> deque= new ArrayDegue<String>();
+deque.add("abe");
+deque.add("bef");
+for(String str: deque)
+{
+System.out.println(str);
+}
+}
+}
+2.	Write a short note on Generics an all types of Parameters used in Generics with example code.
+Java Generic methods and generic classes enable programmers to specify, with a single method declaration, a set of related methods, or with a single class declaration, a set of related types, respectively.
+
+Generics also provide compile-time type safety that allows programmers to catch invalid types at compile time.
+
+Using Java Generic concept, we might write a generic method for sorting an array of objects, then invoke the generic method with Integer arrays, Double arrays, String arrays and so on, to sort the array elements.
+
+Generic Methods
+You can write a single generic method declaration that can be called with arguments of different types. Based on the types of the arguments passed to the generic method, the compiler handles each method call appropriately. Following are the rules to define Generic Methods -
+
+All generic method declarations have a type parameter section delimited by angle brackets (< and >) that precedes the method's return type ( < E > in the next example).
+
+Each type parameter section contains one or more type parameters separated by commas. A type parameter, also known as a type variable, is an identifier that specifies a generic type name.
+
+The type parameters can be used to declare the return type and act as placeholders for the types of the arguments passed to the generic method, which are known as actual type arguments.
+
+A generic method's body is declared like that of any other method. Note that type parameters can represent only reference types, not primitive types (like int, double and char).
+
+3.	Write a short note on Map Interface.
+A map contains values on the basis of key i.e. key and value pair. Each key and value pair is known as an entry. Map contains only unique keys.
+
+Map is useful if you have to search, update or delete elements on the basis of key
+
+
+4.	Write the difference between LinkedList and ArrayList.
+
+ArrayList	LinkedList
+1) ArrayList internally uses dynamic array to store the elements.	
+LinkedList internally uses doubly linked list to store the elements.
+2) Manipulation with ArrayList is slow because it internally uses array. 
+If any element is removed from the array, all the bits are shifted in memory.	
+Manipulation with LinkedList is faster than ArrayList because it uses doubly linked list so no bit shifting is required in memory.
+3) ArrayList class can act as a list only because it implements List only.
+	LinkedList class can act as a list and queue both because it implements List and Deque interfaces.
+4) ArrayList is better for storing and accessing data.	
+LinkedList is better for manipulating data
+
+
+5.	Write a note on Dynamic array in java.
+The ArrayList class extends AbstractList and implements the List interface. ArrayList supports dynamic arrays that can grow as needed. Standard Java arrays are of a fixed length. After arrays are created, they cannot grow or shrink, 
+which means that you must know in advance how many elements an array will hold
