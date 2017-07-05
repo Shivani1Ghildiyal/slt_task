@@ -1,0 +1,35 @@
+4th july task
+==============
+1. what is the diffrence between System.out, system.err and System.in?
+ans. System.in
+     ----------
+   System.in is an InputStream which is typically connected to keyboard input of console programs. System.in is not used as often since data is commonly passed to a command line Java application via command line arguments, or configuration files. In applications with GUI the input to the application is given via the GUI. This is a separate input mechanism from Java IO.
+
+      System.out
+      -----------
+    System.out is a PrintStream. System.out normally outputs the data you write to it to the console. This is often used from console-only programs like command line tools. This is also often used to print debug statements of from a program (though it may arguably not be the best way to get debug info out of a program).
+
+    System.err
+    -----------
+    System.err is a PrintStream. System.err works like System.out except it is normally only used to output error texts. Some programs (like Eclipse) will show the output to System.err in red text, to make it more obvious that it is error text.
+
+2.what is the purpose of system class?
+ans.  System class is provided with useful fields (static members) pertaining to the environment.
+ Standard input,output and error output streams are provided with System class. These are used to access the externally defined properties and environment variables.
+
+3. which is the abstract parent class of FileWriter?
+ans.  OutputStreamWriter
+
+4.which class is used to read streams of character from  file?
+ans. FileReader 
+5. which class is used to read streams of raw bytes from file?
+ans. FileInputStream
+
+6. what is the diffrence between FileInputStream, FileOutputStream and RandomAccessFile?
+ans. RandomAccessFile treats the file as an array of bytes where it has the internal pointer. The fact that it treats it like a large array of bytes is what is unique about this class. FileInputStream however just reads the stream and returns the data. It is more suited to reading raw data like images etc. It does not treat the file as a large array, it just keeps tabs of where in the file it has read so far. With FileInputStream you would actually have to read the data and place it into an array to get the same style of access as RandomAccessFile.
+    FileInputStream creates an InputStream( a stream of Input) that you can use to read bytes (8 by at a time) from a file.FileOutputStream creates a OutputStream that you can use to writes bytes (8 bit at a time) to a file. If that file is not exist in filesystem then it first creates & then write bytes to it.
+ 
+
+7. write a note on channels and buffer with example.
+ans. Buffer is a block of data that is to be written to a channel or just read from a channel. It is an object that holds data and acts as an endpoint in a NIO channel. Buffer provides a formal mechanism to access data and tracks the read and write processes.
+Buffer is one of the main differences between the old Java I/O and the NIO. Previously data is read directly from a stream or written directly into it. Now the data is read from a buffer or written into it. Channels are synonymous to streams in the NIO.
