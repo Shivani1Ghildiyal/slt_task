@@ -1,5 +1,7 @@
 4th july task
 ==============
+
+
 1. what is the diffrence between System.out, system.err and System.in?
 ans. System.in
      ----------
